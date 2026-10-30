@@ -1,3 +1,5 @@
+[![CI Pipeline](https://github.com/keshvi3506/TaskFlowAI/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/keshvi3506/TaskFlowAI/actions/workflows/ci.yml)
+
 # TaskFlow AI — Practical 13 (ITUE301)
 
 A full-stack task manager with CRUD operations and a secure Groq-powered task description generator.
@@ -73,3 +75,35 @@ For this quick practical implementation, tasks are stored in a local JSON file o
 
 ## AI provider note
 This practical uses the Groq hosted inference API and the `openai/gpt-oss-20b` model. This is a genuine external AI API call, not a hardcoded response. Groq's free-plan access is subject to account and model rate limits. The college practical brief specifically names OpenAI or Gemini; confirm with your faculty that Groq is acceptable as an alternative provider.
+
+## Practical 12 — CI/CD Pipeline with GitHub Actions
+
+This repository uses GitHub Actions for Continuous Integration. Every push to the
+`main` branch triggers the workflow at `.github/workflows/ci.yml`.
+
+The workflow checks out the repository, sets up Node.js 20, installs backend
+dependencies, and runs the automated API tests using Vitest and Supertest.
+
+### Run backend tests locally
+
+From the repository root:
+
+```powershell
+cd backend
+npm install
+npm test
+```
+
+### Pipeline demonstration
+
+1. Push the workflow and tests to `main`.
+2. Open the repository's **Actions** tab and verify that the CI Pipeline passes.
+3. To demonstrate a failure, temporarily change an expected value in
+   `backend/tests/api.test.js` (for example, expect status `201` instead of `200`).
+4. Commit and push that intentional test change. Open the Actions run and inspect
+   the failed test log (red X).
+5. Restore the correct expected value (`200`), commit, and push again.
+6. Confirm the latest run passes (green check).
+7. Capture screenshots of the failed and successful runs for the practical journal.
+
+Do not leave the deliberately broken test in the final submitted version.
