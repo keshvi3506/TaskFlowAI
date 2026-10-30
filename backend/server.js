@@ -3,7 +3,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import { randomUUID } from 'node:crypto';
 
 dotenv.config();
@@ -134,4 +134,10 @@ app.use((err, _req, res, _next) => {
   console.error(err);
   res.status(500).json({ message: 'Something went wrong on the server. Please try again.' });
 });
-app.listen(PORT, () => console.log(`Backend running at http://localhost:${PORT}`));
+// Export the app so automated tests can exercise the API without opening a port.
+export default app;
+
+// Start the server only when this file is run directly.
+if (process.argv[1] && pathToFileURL(path.resolve(process.argv[1])).href === import.meta.url) {
+  app.listen(PORT, () => console.log(`Backend running at http://localhost:${PORT}`));
+}
