@@ -1,0 +1,26 @@
+[
+  {
+    "id": "eaf1518f-a4b8-454b-ac70-a26df731c2f9",
+    "title": "complete the AWDF Submission as an full stack portfolio",
+    "description": "Gather all required documentation and code samples, integrate them into the AWDF submission portal, and ensure every form field is",
+    "priority": "High",
+    "status": "Pending",
+    "createdAt": "2026-10-30T17:24:41.062Z"
+  },
+  {
+    "id": "04792960-783f-4feb-add4-fc37548e49a0",
+    "title": "complete web app in deadline",
+    "description": "Finish implementing all remaining features, resolve outstanding bugs, and perform final testing to ensure the web app meets the functional and performance requirements. Deploy the application to the production environment and verify that it is fully operational, secure, and documented before the deadline. A successful outcome is a stable, fully tested web app that is accessible to users and meets all agreed-upon",
+    "priority": "Medium",
+    "status": "Pending",
+    "createdAt": "2026-10-30T17:21:16.754Z"
+  },
+  {
+    "id": "24e0ee20-4f7d-4387-b6eb-9a7f41b73b82",
+    "title": "complete task 1 with diiferent colour",
+    "description": "Finish Task 1 by applying a new color scheme to the specified interface elements",
+    "priority": "Medium",
+    "status": "Completed",
+    "createdAt": "2026-10-30T17:20:57.345Z"
+  }
+]
