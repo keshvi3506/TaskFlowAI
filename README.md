@@ -1,6 +1,6 @@
 [![CI Pipeline](https://github.com/keshvi3506/TaskFlowAI/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/keshvi3506/TaskFlowAI/actions/workflows/ci.yml)
 
-# TaskFlow AI — Practical 13 (ITUE301)
+# TaskFlow AI
 
 A full-stack task manager with CRUD operations and a secure Groq-powered task description generator.
 
